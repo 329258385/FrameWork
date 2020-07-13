@@ -1,0 +1,484 @@
+{
+  "version": "0.3.0",
+  "scope": "tree",
+  "id": "de5d6e83-2314-4f53-9f2b-8d8f101e11e4",
+  "title": "MonsterBehaviorTree",
+  "description": "怪物行为树",
+  "root": "42dd3354-8478-4005-8d11-05544c6c9e22",
+  "properties": {},
+  "nodes": {
+    "40b82a4b-5493-4753-830b-06de61d5866b": {
+      "id": "40b82a4b-5493-4753-830b-06de61d5866b",
+      "name": "CheckDistance",
+      "title": "CheckDistance",
+      "description": "检测距离",
+      "properties": {
+        "distance": 7,
+        "targetTag": "Player"
+      },
+      "display": {
+        "x": 72,
+        "y": -336
+      }
+    },
+    "3925e5dd-6e2c-4151-a43b-1f914e037ca6": {
+      "id": "3925e5dd-6e2c-4151-a43b-1f914e037ca6",
+      "name": "CheckView",
+      "title": "CheckView",
+      "description": "检测视野范围",
+      "properties": {
+        "angle": 360
+      },
+      "display": {
+        "x": 72,
+        "y": -264
+      }
+    },
+    "b3ed057f-f723-4dc0-86bf-2f3a7a5b77d1": {
+      "id": "b3ed057f-f723-4dc0-86bf-2f3a7a5b77d1",
+      "name": "Seek",
+      "title": "Seek",
+      "description": "",
+      "properties": {
+        "speed": 2,
+        "angularSpeed": 0.2,
+        "arriveDistance": 5,
+        "targetPosX": 0,
+        "targetPosY": 0,
+        "targetPosZ": 0
+      },
+      "display": {
+        "x": 120,
+        "y": -204
+      }
+    },
+    "42dd3354-8478-4005-8d11-05544c6c9e22": {
+      "id": "42dd3354-8478-4005-8d11-05544c6c9e22",
+      "name": "Priority",
+      "title": "Priority",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": -420,
+        "y": 0
+      },
+      "children": [
+        "f8edd784-928a-41cb-b414-a44d9e2a0666",
+        "8f5de115-5221-4ac3-8582-7b40c187568d"
+      ]
+    },
+    "8f5de115-5221-4ac3-8582-7b40c187568d": {
+      "id": "8f5de115-5221-4ac3-8582-7b40c187568d",
+      "name": "Sequence",
+      "title": "Sequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": -252,
+        "y": 108
+      },
+      "children": [
+        "00b8ba4b-66c8-44ec-826a-b80a92b7b6ff",
+        "fef165eb-a2c0-4bb9-8c8f-d1cb6643284f"
+      ]
+    },
+    "fef165eb-a2c0-4bb9-8c8f-d1cb6643284f": {
+      "id": "fef165eb-a2c0-4bb9-8c8f-d1cb6643284f",
+      "name": "Patrol",
+      "title": "巡逻",
+      "description": "",
+      "properties": {
+        "speed": 2,
+        "angularSpeed": 2,
+        "arriveDistance": 2,
+        "randomPatrol": "true",
+        "waypoints": "120,2,100;105,2,100,90,2,100;105,2,115,105,2,85"
+      },
+      "display": {
+        "x": -36,
+        "y": 228
+      }
+    },
+    "00b8ba4b-66c8-44ec-826a-b80a92b7b6ff": {
+      "id": "00b8ba4b-66c8-44ec-826a-b80a92b7b6ff",
+      "name": "SetFloatParameter",
+      "title": "Animator-SetFloat",
+      "description": "设置动画器上的float参数",
+      "properties": {
+        "floatValue": 0.5,
+        "setOnce": "false",
+        "paramaterName": "MoveSpeed"
+      },
+      "display": {
+        "x": -36,
+        "y": 168
+      }
+    },
+    "23cec755-3514-46e5-8a42-d36fe8af0beb": {
+      "id": "23cec755-3514-46e5-8a42-d36fe8af0beb",
+      "name": "RandomMemPriority",
+      "title": "RandomMemPriority",
+      "description": "同MemPriority但是这里会打乱子任务的顺序",
+      "properties": {},
+      "display": {
+        "x": 396,
+        "y": 132
+      },
+      "children": [
+        "d7510aae-ccc3-4235-ac30-98e48ac14a82",
+        "11fa7345-97f8-47d2-8186-cba169be3682"
+      ]
+    },
+    "4048c863-584b-4f90-9607-26f178c101b0": {
+      "id": "4048c863-584b-4f90-9607-26f178c101b0",
+      "name": "SetTrigger",
+      "title": "Animator-SetTrigger",
+      "description": "触发动画器上的触发器",
+      "properties": {
+        "paramaterName": "TriggerAttack"
+      },
+      "display": {
+        "x": 396,
+        "y": 192
+      }
+    },
+    "d7510aae-ccc3-4235-ac30-98e48ac14a82": {
+      "id": "d7510aae-ccc3-4235-ac30-98e48ac14a82",
+      "name": "SetIntegerParameter",
+      "title": "Animator-SetInteger",
+      "description": "设置动画器上的int参数",
+      "properties": {
+        "intValue": 1,
+        "setOnce": "false",
+        "paramaterName": "AttackID"
+      },
+      "display": {
+        "x": 612,
+        "y": 96
+      }
+    },
+    "11fa7345-97f8-47d2-8186-cba169be3682": {
+      "id": "11fa7345-97f8-47d2-8186-cba169be3682",
+      "name": "SetIntegerParameter",
+      "title": "Animator-SetInteger",
+      "description": "设置动画器上的int参数",
+      "properties": {
+        "intValue": 2,
+        "setOnce": "false",
+        "paramaterName": "AttackID"
+      },
+      "display": {
+        "x": 612,
+        "y": 180
+      }
+    },
+    "1918840d-d00d-43bb-8f69-0ebb6f48e1b4": {
+      "id": "1918840d-d00d-43bb-8f69-0ebb6f48e1b4",
+      "name": "SetFloatParameter",
+      "title": "Animator-SetFloat",
+      "description": "设置动画器上的float参数",
+      "properties": {
+        "floatValue": 0,
+        "setOnce": "false",
+        "paramaterName": "MoveSpeed"
+      },
+      "display": {
+        "x": 384,
+        "y": 72
+      }
+    },
+    "cd1d890d-5999-4953-b82a-814ec8c3e8b3": {
+      "id": "cd1d890d-5999-4953-b82a-814ec8c3e8b3",
+      "name": "Wait",
+      "title": "Wait <milliseconds>ms",
+      "description": "",
+      "properties": {
+        "milliseconds": 1600
+      },
+      "display": {
+        "x": 408,
+        "y": 264
+      }
+    },
+    "0acdd0a4-e885-4550-8743-111f93af110b": {
+      "id": "0acdd0a4-e885-4550-8743-111f93af110b",
+      "name": "Sequence",
+      "title": "Sequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": -180,
+        "y": -264
+      },
+      "children": [
+        "40b82a4b-5493-4753-830b-06de61d5866b",
+        "3925e5dd-6e2c-4151-a43b-1f914e037ca6",
+        "4308ccb0-b4d1-450e-8294-1cd767a0f7e1"
+      ]
+    },
+    "f8edd784-928a-41cb-b414-a44d9e2a0666": {
+      "id": "f8edd784-928a-41cb-b414-a44d9e2a0666",
+      "name": "MemSequence",
+      "title": "MemSequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": -324,
+        "y": -144
+      },
+      "children": [
+        "0acdd0a4-e885-4550-8743-111f93af110b",
+        "560f9f9e-3731-4922-8a0b-520fce364480"
+      ]
+    },
+    "f9fb7cfb-2835-4bdf-8230-50cfc63d5775": {
+      "id": "f9fb7cfb-2835-4bdf-8230-50cfc63d5775",
+      "name": "SetDynamicFloatParameter",
+      "title": "SetDynamicFloatParameter",
+      "description": "根据外部数据动态设置动画器上的float参数",
+      "properties": {
+        "paramName": "MoveSpeed",
+        "paramSource": "SeekMoveSpeed"
+      },
+      "display": {
+        "x": 156,
+        "y": -144
+      }
+    },
+    "4308ccb0-b4d1-450e-8294-1cd767a0f7e1": {
+      "id": "4308ccb0-b4d1-450e-8294-1cd767a0f7e1",
+      "name": "Parallel",
+      "title": "Parallel",
+      "description": "并行执行所有任务 全部成功则返回成功 有一个失败则返回失败 有一个在running则返回running。下次从头开始执行所有任务。",
+      "properties": {},
+      "display": {
+        "x": -72,
+        "y": -192
+      },
+      "children": [
+        "b3ed057f-f723-4dc0-86bf-2f3a7a5b77d1",
+        "f9fb7cfb-2835-4bdf-8230-50cfc63d5775"
+      ]
+    },
+    "560f9f9e-3731-4922-8a0b-520fce364480": {
+      "id": "560f9f9e-3731-4922-8a0b-520fce364480",
+      "name": "MemParallel",
+      "title": "MemParallel",
+      "description": "并行执行所有任务 全部成功则返回成功 有一个失败则返回失败 有一个在running则返回running。下次直接执行所有running状态的任务，若没有则从头开始执行所有任务。",
+      "properties": {},
+      "display": {
+        "x": 96,
+        "y": 48
+      },
+      "children": [
+        "1918840d-d00d-43bb-8f69-0ebb6f48e1b4",
+        "23cec755-3514-46e5-8a42-d36fe8af0beb",
+        "4048c863-584b-4f90-9607-26f178c101b0",
+        "cd1d890d-5999-4953-b82a-814ec8c3e8b3"
+      ]
+    }
+  },
+  "display": {
+    "camera_x": 864,
+    "camera_y": 412.5,
+    "camera_z": 0.75,
+    "x": -552,
+    "y": 0
+  },
+  "custom_nodes": [
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "LogAction",
+      "category": "action",
+      "title": "打印日志",
+      "description": "",
+      "properties": {
+        "logStr": ""
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "ParallelSelector",
+      "category": "composite",
+      "title": null,
+      "description": "并行执行所有任务 有一个成功则返回成功 没有成功的有一个在running则返回running  全部失败则返回失败",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CheckView",
+      "category": "condition",
+      "title": null,
+      "description": "检测视野范围",
+      "properties": {
+        "angle": 90
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CheckDistance",
+      "category": "condition",
+      "title": null,
+      "description": "检测距离",
+      "properties": {
+        "distance": 7,
+        "targetTag": ""
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Seek",
+      "category": "action",
+      "title": null,
+      "description": null,
+      "properties": {
+        "speed": 0,
+        "angularSpeed": 0,
+        "arriveDistance": 2,
+        "targetPosX": 0,
+        "targetPosY": 0,
+        "targetPosZ": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Patrol",
+      "category": "action",
+      "title": null,
+      "description": null,
+      "properties": {
+        "speed": 0,
+        "angularSpeed": 0,
+        "arriveDistance": 0,
+        "randomPatrol": "false"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "RandomMemSequence",
+      "category": "composite",
+      "title": null,
+      "description": "同MemSequence但是这里会打乱子任务的顺序",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "RandomMemPriority",
+      "category": "composite",
+      "title": null,
+      "description": "同MemPriority但是这里会打乱子任务的顺序",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Play",
+      "category": "action",
+      "title": "Animator-Play",
+      "description": "播放Animator动画",
+      "properties": {
+        "stateLayer": -1
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetBoolParameter",
+      "category": "action",
+      "title": "Animator-SetBool",
+      "description": "设置动画器上的bool参数",
+      "properties": {
+        "boolValue": "false",
+        "setOnce": "false"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetFloatParameter",
+      "category": "action",
+      "title": "Animator-SetFloat",
+      "description": "设置动画器上的float参数",
+      "properties": {
+        "floatValue": 0,
+        "setOnce": "false"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetIntegerParameter",
+      "category": "action",
+      "title": "Animator-SetInteger",
+      "description": "设置动画器上的int参数",
+      "properties": {
+        "intValue": 0,
+        "setOnce": "false"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetTrigger",
+      "category": "action",
+      "title": "Animator-SetTrigger",
+      "description": "触发动画器上的触发器",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "IsName",
+      "category": "condition",
+      "title": null,
+      "description": "动作正在播放，则返回成功",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CheckArriveDistance",
+      "category": "condition",
+      "title": null,
+      "description": "检测是否到达目标位置，若目标不存在则使用配置中的xyz作为目标点",
+      "properties": {
+        "arriveDistance": 2
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetDynamicFloatParameter",
+      "category": "action",
+      "title": null,
+      "description": "根据外部数据动态设置动画器上的float参数",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Parallel",
+      "category": "composite",
+      "title": "",
+      "description": "并行执行所有任务 全部成功则返回成功 有一个失败则返回失败 有一个在running则返回running。下次从头开始执行所有任务。",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "MemParallel",
+      "category": "composite",
+      "title": null,
+      "description": "并行执行所有任务 全部成功则返回成功 有一个失败则返回失败 有一个在running则返回running。下次直接执行所有running状态的任务，若没有则从头开始执行所有任务。",
+      "properties": {}
+    }
+  ]
+}

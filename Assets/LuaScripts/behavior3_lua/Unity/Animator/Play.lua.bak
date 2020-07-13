@@ -1,0 +1,42 @@
+require 'behavior3_lua.core.Action'
+--播放Animator动画
+local play = b3.Class("Play", b3.Action)
+b3.Play = play
+
+function play:ctor(settings)
+	b3.Action.ctor(self, settings)
+
+	self.name = "Play"
+	self.title = "播放Animator动画"
+	self.properties = {stateName = "",stateLayer = "-1", normalizedTime ="0.5"}
+	self.targetGameObject = nil
+	self.targetPos = Vector3.Zero
+	settings = settings or {}
+end
+
+function play:open(tick)
+	self.targetTf = tick.blackboard:get('DistanceTarget')
+	self.configPos = Vector3.New(tonumber(targetPosX),tonumber(targetPosY),tonumber(targetPosZ));--配置中的位置
+end
+
+function play:tick(tick)
+	if( IsNull(self.targetTf) )then
+		self.targetPos = self.configPos;
+	else
+		self.targetPos = self.targetTf.position;
+	end
+	local direction = self.targetPos - tick.target.transform.position;
+	local sqrPos = Vector3.SqrMagnitude(direction);
+	print("play:tick sqrPos ="..sqrPos)
+	if (sqrPos < self.properties.arriveDistance)then
+		return b3.SUCCESS;
+	end
+	tick.target.transform:Translate(Vector3.forward * Time.deltaTime * self.properties.speed)
+	local forwVector = self.targetPos - tick.target.transform.position;
+	forwVector.y = 0;
+	self.targetRotation = Quaternion.LookRotation(forwVector, Vector3.up)
+	if not IsNull(self.targetRotation) then
+		tick.target.transform.rotation = Quaternion.Slerp(tick.target.transform.rotation , self.targetRotation, self.properties.angularSpeed)
+	end
+	return b3.RUNNING
+end

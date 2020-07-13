@@ -1,0 +1,874 @@
+{
+  "version": "0.3.0",
+  "scope": "tree",
+  "id": "ef92afed-2479-4665-aff4-69252e346665",
+  "title": "A behavior tree",
+  "description": "",
+  "root": "2ef736b2-4da3-43c6-a332-b77aa9d52b5d",
+  "properties": {},
+  "nodes": {
+    "2ef736b2-4da3-43c6-a332-b77aa9d52b5d": {
+      "id": "2ef736b2-4da3-43c6-a332-b77aa9d52b5d",
+      "name": "MemSequence",
+      "title": "MemSequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": -228,
+        "y": -12
+      },
+      "children": [
+        "f5c2504d-3f8c-44e2-9118-9c7727f5f4e0",
+        "13b057b7-515e-4433-9d65-40c2b0d4313b"
+      ]
+    },
+    "f5c2504d-3f8c-44e2-9118-9c7727f5f4e0": {
+      "id": "f5c2504d-3f8c-44e2-9118-9c7727f5f4e0",
+      "name": "AutoLockTarget",
+      "title": "AutoLockTarget",
+      "description": "自动寻找仇恨目标，把仇恨列表中的第一个作为仇恨目标，执行完返回，值始终为true",
+      "properties": {},
+      "display": {
+        "x": -24,
+        "y": -372
+      }
+    },
+    "13b057b7-515e-4433-9d65-40c2b0d4313b": {
+      "id": "13b057b7-515e-4433-9d65-40c2b0d4313b",
+      "name": "Switch",
+      "title": "Switch",
+      "description": "条件执行，首先判断条件是否为真，如果条件为真，那么执行\"真时执行\"分支；否则，执行\"假时执行\"分支。返回结果根据具体执行分支的执行结果来决定。先执行第一个节点 执行结果若返回成功则执行第二个节点 否则执行第三个节点",
+      "properties": {},
+      "display": {
+        "x": -120,
+        "y": -12
+      },
+      "children": [
+        "c6e98bf1-6830-4337-bc2b-0066b4e7c52f",
+        "cab5b792-56ae-435b-bea2-389da40b8139",
+        "f182ba97-d015-40be-8c21-db28d47d01ce"
+      ]
+    },
+    "c6e98bf1-6830-4337-bc2b-0066b4e7c52f": {
+      "id": "c6e98bf1-6830-4337-bc2b-0066b4e7c52f",
+      "name": "HadLockTarget",
+      "title": "HadLockTarget",
+      "description": "判断有没有仇恨目标，有返回true，否则返回false",
+      "properties": {},
+      "display": {
+        "x": 72,
+        "y": -300
+      }
+    },
+    "cab5b792-56ae-435b-bea2-389da40b8139": {
+      "id": "cab5b792-56ae-435b-bea2-389da40b8139",
+      "name": "MemPriority",
+      "title": "MemPriority",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 12,
+        "y": -12
+      },
+      "children": [
+        "f175afa9-e501-4371-8363-b107ef3b1da8",
+        "1a52622e-8243-4c48-85b6-f08884826f81"
+      ]
+    },
+    "f182ba97-d015-40be-8c21-db28d47d01ce": {
+      "id": "f182ba97-d015-40be-8c21-db28d47d01ce",
+      "name": "Switch",
+      "title": "Switch",
+      "description": "条件执行，首先判断条件是否为真，如果条件为真，那么执行\"真时执行\"分支；否则，执行\"假时执行\"分支。返回结果根据具体执行分支的执行结果来决定。先执行第一个节点 执行结果若返回成功则执行第二个节点 否则执行第三个节点",
+      "properties": {},
+      "display": {
+        "x": 24,
+        "y": 564
+      },
+      "children": [
+        "970dc070-7917-4b9c-9234-70fdb641643b",
+        "292d1dbd-972b-4809-8c12-36493bb99362",
+        "34fe8477-4725-4665-9b5b-dc6fc7d98e3a"
+      ]
+    },
+    "4fce6fe3-e0f2-4762-971e-8393168a22f1": {
+      "id": "4fce6fe3-e0f2-4762-971e-8393168a22f1",
+      "name": "MemSequence",
+      "title": "MemSequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 432,
+        "y": -156
+      },
+      "children": [
+        "ceb90fc1-4d16-4cb6-916c-474f0fdcd4d4",
+        "bb5c1cc0-778c-439d-9b25-da7c9bb89d62",
+        "cee7a54b-a2b4-480c-a874-028584bbc2da"
+      ]
+    },
+    "4ea07e6b-6e6b-43c2-9a0e-f65ef6d741de": {
+      "id": "4ea07e6b-6e6b-43c2-9a0e-f65ef6d741de",
+      "name": "CheckTargetDistance",
+      "title": "CheckTargetDistance",
+      "description": "判断与目标的距离是否在指定范围内，如果是返回true，否则返回false",
+      "properties": {
+        "distance": 3
+      },
+      "display": {
+        "x": 732,
+        "y": -240
+      }
+    },
+    "f33e0d9f-76bf-4edc-88e7-e0da1b57d74d": {
+      "id": "f33e0d9f-76bf-4edc-88e7-e0da1b57d74d",
+      "name": "FaceTo",
+      "title": "FaceTo",
+      "description": "执行朝向逻辑，执行完后返回，不管有没被成功执行返回值始终为true\n如果有锁定的目标就朝向目标\n如果没有锁定的目标就朝向设置的坐标点",
+      "properties": {
+        "angularSpeed": 0.8,
+        "targetPosX": 0,
+        "targetPosY": 0,
+        "targetPosZ": 0
+      },
+      "display": {
+        "x": 576,
+        "y": 84
+      }
+    },
+    "552568e8-6ca0-4e7f-8ddb-0ba67e4f7050": {
+      "id": "552568e8-6ca0-4e7f-8ddb-0ba67e4f7050",
+      "name": "CastSkill",
+      "title": "CastSkill",
+      "description": "释放技能 先判断是否可以释放技能 可以就播放相应的动作\nparamaterName 动作控制器中的参数名\nintValue 设置动作控制器中参数的值\nskillid 释放的技能ID",
+      "properties": {
+        "paramaterName": "AttackID",
+        "intValue": 1,
+        "skillid": 1
+      },
+      "display": {
+        "x": 576,
+        "y": 180
+      }
+    },
+    "970dc070-7917-4b9c-9234-70fdb641643b": {
+      "id": "970dc070-7917-4b9c-9234-70fdb641643b",
+      "name": "IsInPatrolArea",
+      "title": "IsInPatrolArea",
+      "description": "判断是否在巡逻区域，是返回true，否则返回false\n区域由出生点和巡逻半径组成 这些数据都是读取实例对象上的数据",
+      "properties": {},
+      "display": {
+        "x": 180,
+        "y": 492
+      }
+    },
+    "bd4e7f01-8441-4419-87fc-285e0b0a4b36": {
+      "id": "bd4e7f01-8441-4419-87fc-285e0b0a4b36",
+      "name": "PatrolInRange",
+      "title": "PatrolInRange",
+      "description": "巡逻 强制返回success\npatrolType 1范围取当前对象的出生点和巡逻半径 2取配置中的巡逻坐标点\nspeed巡逻速度\nangularSpeed 转角度的速度\narriveDistance 自身和巡逻点的距离小于此值认为到达\nrandomPatrol 当patrolType为2时有效。为true表示随机巡逻点 为false表示按照配置顺序一个一个走,走完循环回到第一个 \nwaypoints 对象配置身上没有的情况下使用此配置巡逻点,每个巡逻点坐标用\";\"隔开  如： \"120,2,100;105,2,100,90,2,100;105,2,115,105,2,85\"",
+      "properties": {
+        "patrolType": 1,
+        "speed": 2,
+        "angularSpeed": 0.2,
+        "arriveDistance": 2,
+        "randomPatrol": "true",
+        "waypoints": "0,0,0"
+      },
+      "display": {
+        "x": 276,
+        "y": 600
+      }
+    },
+    "4df42268-a5eb-4d72-9ded-ed8308099eb4": {
+      "id": "4df42268-a5eb-4d72-9ded-ed8308099eb4",
+      "name": "GoPatrolArea",
+      "title": "GoPatrolArea",
+      "description": "回到巡逻区域 强制返回success\ngopatrolType 1对象的出生点 2上次巡逻点\nspeed回去的速度\nangularSpeed 转角度的速度\narriveDistance 自身和目标点的距离小于此值认为到达\ntargetpos 取不到上次巡逻点的情况下使用此配置目标点如： \"120,2,100\"",
+      "properties": {
+        "gopatrolType": 1,
+        "speed": 2,
+        "angularSpeed": 0.2,
+        "arriveDistance": 2,
+        "targetpos": "0,0,0"
+      },
+      "display": {
+        "x": 276,
+        "y": 708
+      }
+    },
+    "cee7a54b-a2b4-480c-a874-028584bbc2da": {
+      "id": "cee7a54b-a2b4-480c-a874-028584bbc2da",
+      "name": "MoveTo",
+      "title": "MoveTo",
+      "description": "强制返回b3.SUCCESS\n移动到指定位置 如果LookTargetInfo存在就移动到LookTargetInfo对象所在位置 如果不存在就移动到配置中的坐标位置(targetPosX,targetPosY,targetPosZ)",
+      "properties": {
+        "speed": 4,
+        "angularSpeed": 0.8,
+        "arriveDistance": 2,
+        "targetPosX": 0,
+        "targetPosY": 0,
+        "targetPosZ": 0
+      },
+      "display": {
+        "x": 576,
+        "y": -60
+      }
+    },
+    "aaa7b924-c0c9-4644-9cdd-ce88a867e8a4": {
+      "id": "aaa7b924-c0c9-4644-9cdd-ce88a867e8a4",
+      "name": "Inverter",
+      "title": "Inverter",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 552,
+        "y": -240
+      },
+      "child": "4ea07e6b-6e6b-43c2-9a0e-f65ef6d741de"
+    },
+    "292d1dbd-972b-4809-8c12-36493bb99362": {
+      "id": "292d1dbd-972b-4809-8c12-36493bb99362",
+      "name": "Sequence",
+      "title": "Sequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 132,
+        "y": 576
+      },
+      "children": [
+        "7ee0a1e5-a1d2-40d4-8875-b39fcf9d0334",
+        "bd4e7f01-8441-4419-87fc-285e0b0a4b36"
+      ]
+    },
+    "7ee0a1e5-a1d2-40d4-8875-b39fcf9d0334": {
+      "id": "7ee0a1e5-a1d2-40d4-8875-b39fcf9d0334",
+      "name": "SetFloatParameter",
+      "title": "Animator-SetFloat",
+      "description": "设置动画器上的float参数",
+      "properties": {
+        "floatValue": 0.5,
+        "setOnce": "false",
+        "paramaterName": "MoveSpeed"
+      },
+      "display": {
+        "x": 276,
+        "y": 552
+      }
+    },
+    "34fe8477-4725-4665-9b5b-dc6fc7d98e3a": {
+      "id": "34fe8477-4725-4665-9b5b-dc6fc7d98e3a",
+      "name": "Sequence",
+      "title": "Sequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 132,
+        "y": 684
+      },
+      "children": [
+        "839bea9a-85df-4bb0-83b2-9735b5894d00",
+        "4df42268-a5eb-4d72-9ded-ed8308099eb4"
+      ]
+    },
+    "839bea9a-85df-4bb0-83b2-9735b5894d00": {
+      "id": "839bea9a-85df-4bb0-83b2-9735b5894d00",
+      "name": "SetFloatParameter",
+      "title": "Animator-SetFloat",
+      "description": "设置动画器上的float参数",
+      "properties": {
+        "floatValue": 0.5,
+        "setOnce": "false",
+        "paramaterName": "MoveSpeed"
+      },
+      "display": {
+        "x": 276,
+        "y": 660
+      }
+    },
+    "bb5c1cc0-778c-439d-9b25-da7c9bb89d62": {
+      "id": "bb5c1cc0-778c-439d-9b25-da7c9bb89d62",
+      "name": "SetFloatParameter",
+      "title": "Animator-SetFloat",
+      "description": "设置动画器上的float参数",
+      "properties": {
+        "floatValue": 1,
+        "setOnce": "false",
+        "paramaterName": "MoveSpeed"
+      },
+      "display": {
+        "x": 576,
+        "y": -108
+      }
+    },
+    "18ca67a6-3e0d-4056-9d4d-23191cf9c626": {
+      "id": "18ca67a6-3e0d-4056-9d4d-23191cf9c626",
+      "name": "Wait",
+      "title": "Wait <milliseconds>ms",
+      "description": "",
+      "properties": {
+        "milliseconds": 1000
+      },
+      "display": {
+        "x": 804,
+        "y": 180
+      }
+    },
+    "0594168e-2764-4f63-94e5-04207add01d6": {
+      "id": "0594168e-2764-4f63-94e5-04207add01d6",
+      "name": "Wait",
+      "title": "Wait <milliseconds>ms",
+      "description": "",
+      "properties": {
+        "milliseconds": 500
+      },
+      "display": {
+        "x": 576,
+        "y": 132
+      }
+    },
+    "f3656f87-2d5c-44fd-9ae8-0df71e3d9bd7": {
+      "id": "f3656f87-2d5c-44fd-9ae8-0df71e3d9bd7",
+      "name": "RandomMemPriority",
+      "title": "RandomMemPriority",
+      "description": "同MemPriority但是这里会打乱子任务的顺序",
+      "properties": {},
+      "display": {
+        "x": 588,
+        "y": 240
+      },
+      "children": [
+        "18ca67a6-3e0d-4056-9d4d-23191cf9c626",
+        "d4b7fc38-1d60-45d8-8453-4c0dd476f9fb",
+        "b360dd2f-d1c9-4712-b549-0e05d2803acc"
+      ]
+    },
+    "d4b7fc38-1d60-45d8-8453-4c0dd476f9fb": {
+      "id": "d4b7fc38-1d60-45d8-8453-4c0dd476f9fb",
+      "name": "Wait",
+      "title": "Wait <milliseconds>ms",
+      "description": "",
+      "properties": {
+        "milliseconds": 1800
+      },
+      "display": {
+        "x": 804,
+        "y": 228
+      }
+    },
+    "b360dd2f-d1c9-4712-b549-0e05d2803acc": {
+      "id": "b360dd2f-d1c9-4712-b549-0e05d2803acc",
+      "name": "Wait",
+      "title": "Wait <milliseconds>ms",
+      "description": "",
+      "properties": {
+        "milliseconds": 3000
+      },
+      "display": {
+        "x": 804,
+        "y": 276
+      }
+    },
+    "f175afa9-e501-4371-8363-b107ef3b1da8": {
+      "id": "f175afa9-e501-4371-8363-b107ef3b1da8",
+      "name": "MemParallel",
+      "title": "MemParallel",
+      "description": "并行执行所有任务 全部成功则返回成功 有一个失败则返回失败 有一个在running则返回running。下次直接执行所有running状态的任务，若没有则从头开始执行所有任务。",
+      "properties": {},
+      "display": {
+        "x": 132,
+        "y": -156
+      },
+      "children": [
+        "5aa41a64-ebe0-4aa8-9169-e363ac5468e8",
+        "15755a65-ddff-4d4b-9c17-3925d0656791"
+      ]
+    },
+    "1a52622e-8243-4c48-85b6-f08884826f81": {
+      "id": "1a52622e-8243-4c48-85b6-f08884826f81",
+      "name": "MemParallel",
+      "title": "MemParallel",
+      "description": "并行执行所有任务 全部成功则返回成功 有一个失败则返回失败 有一个在running则返回running。下次直接执行所有running状态的任务，若没有则从头开始执行所有任务。",
+      "properties": {},
+      "display": {
+        "x": 132,
+        "y": 60
+      },
+      "children": [
+        "c490aaa8-f57c-46d0-8128-5fa9a2e73999",
+        "7d7af721-533b-43be-96c1-ad9f8d42b9d8"
+      ]
+    },
+    "7a6eca25-7266-4173-8e0b-477c20f6a77d": {
+      "id": "7a6eca25-7266-4173-8e0b-477c20f6a77d",
+      "name": "CheckTargetDistance",
+      "title": "CheckTargetDistance",
+      "description": "判断与目标的距离是否在指定范围内，如果是返回true，否则返回false",
+      "properties": {
+        "distance": 3
+      },
+      "display": {
+        "x": 576,
+        "y": 336
+      }
+    },
+    "af7b1877-0b99-4910-9e3c-166ecdf2c409": {
+      "id": "af7b1877-0b99-4910-9e3c-166ecdf2c409",
+      "name": "CheckTargetDistance",
+      "title": "CheckTargetDistance",
+      "description": "判断与目标的距离是否在指定范围内，如果是返回true，否则返回false",
+      "properties": {
+        "distance": 3
+      },
+      "display": {
+        "x": 732,
+        "y": -168
+      }
+    },
+    "ceb90fc1-4d16-4cb6-916c-474f0fdcd4d4": {
+      "id": "ceb90fc1-4d16-4cb6-916c-474f0fdcd4d4",
+      "name": "Inverter",
+      "title": "Inverter",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 552,
+        "y": -168
+      },
+      "child": "af7b1877-0b99-4910-9e3c-166ecdf2c409"
+    },
+    "5aa41a64-ebe0-4aa8-9169-e363ac5468e8": {
+      "id": "5aa41a64-ebe0-4aa8-9169-e363ac5468e8",
+      "name": "RepeatUntilFailure",
+      "title": "Repeat Until Failure",
+      "description": "",
+      "properties": {
+        "maxLoop": -1
+      },
+      "display": {
+        "x": 360,
+        "y": -240
+      },
+      "child": "aaa7b924-c0c9-4644-9cdd-ce88a867e8a4"
+    },
+    "7d7af721-533b-43be-96c1-ad9f8d42b9d8": {
+      "id": "7d7af721-533b-43be-96c1-ad9f8d42b9d8",
+      "name": "RepeatUntilFailure",
+      "title": "Repeat Until Failure",
+      "description": "",
+      "properties": {
+        "maxLoop": -1
+      },
+      "display": {
+        "x": 336,
+        "y": 336
+      },
+      "child": "7a6eca25-7266-4173-8e0b-477c20f6a77d"
+    },
+    "c490aaa8-f57c-46d0-8128-5fa9a2e73999": {
+      "id": "c490aaa8-f57c-46d0-8128-5fa9a2e73999",
+      "name": "Forever",
+      "title": "Forever",
+      "description": "无限循环，每次都返回RUNNING并执行一次子树。",
+      "properties": {},
+      "display": {
+        "x": 288,
+        "y": 60
+      },
+      "child": "66ef5103-8572-45c7-99b2-85625adcbc20"
+    },
+    "15755a65-ddff-4d4b-9c17-3925d0656791": {
+      "id": "15755a65-ddff-4d4b-9c17-3925d0656791",
+      "name": "Forever",
+      "title": "Forever",
+      "description": "无限循环，每次都返回RUNNING并执行一次子树。",
+      "properties": {},
+      "display": {
+        "x": 312,
+        "y": -156
+      },
+      "child": "4fce6fe3-e0f2-4762-971e-8393168a22f1"
+    },
+    "e250d06e-ad3c-4e07-b311-6331ce48b208": {
+      "id": "e250d06e-ad3c-4e07-b311-6331ce48b208",
+      "name": "SetFloatParameter",
+      "title": "Animator-SetFloat",
+      "description": "设置动画器上的float参数",
+      "properties": {
+        "floatValue": 0,
+        "setOnce": "false",
+        "paramaterName": "MoveSpeed"
+      },
+      "display": {
+        "x": 576,
+        "y": 36
+      }
+    },
+    "66ef5103-8572-45c7-99b2-85625adcbc20": {
+      "id": "66ef5103-8572-45c7-99b2-85625adcbc20",
+      "name": "Sequence",
+      "title": "Sequence",
+      "description": "",
+      "properties": {},
+      "display": {
+        "x": 396,
+        "y": 60
+      },
+      "children": [
+        "e250d06e-ad3c-4e07-b311-6331ce48b208",
+        "f33e0d9f-76bf-4edc-88e7-e0da1b57d74d",
+        "0594168e-2764-4f63-94e5-04207add01d6",
+        "552568e8-6ca0-4e7f-8ddb-0ba67e4f7050",
+        "f3656f87-2d5c-44fd-9ae8-0df71e3d9bd7"
+      ]
+    }
+  },
+  "display": {
+    "camera_x": 691.0150000174763,
+    "camera_y": 353.8999998894287,
+    "camera_z": 0.75,
+    "x": -360,
+    "y": -12
+  },
+  "custom_nodes": [
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "LogAction",
+      "category": "action",
+      "title": "打印日志",
+      "description": "",
+      "properties": {
+        "logStr": ""
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "ParallelSelector",
+      "category": "composite",
+      "title": null,
+      "description": "并行执行所有任务 有一个成功则返回成功 没有成功的有一个在running则返回running  全部失败则返回失败",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CheckView",
+      "category": "condition",
+      "title": null,
+      "description": "检测视野范围",
+      "properties": {
+        "angle": 90
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CheckDistance",
+      "category": "condition",
+      "title": null,
+      "description": "检测距离",
+      "properties": {
+        "distance": 7,
+        "targetTag": ""
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Seek",
+      "category": "action",
+      "title": null,
+      "description": null,
+      "properties": {
+        "speed": 0,
+        "angularSpeed": 0,
+        "arriveDistance": 2,
+        "targetPosX": 0,
+        "targetPosY": 0,
+        "targetPosZ": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Patrol",
+      "category": "action",
+      "title": null,
+      "description": null,
+      "properties": {
+        "speed": 0,
+        "angularSpeed": 0,
+        "arriveDistance": 0,
+        "randomPatrol": "false"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "RandomMemSequence",
+      "category": "composite",
+      "title": null,
+      "description": "同MemSequence但是这里会打乱子任务的顺序",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "RandomMemPriority",
+      "category": "composite",
+      "title": null,
+      "description": "同MemPriority但是这里会打乱子任务的顺序",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Play",
+      "category": "action",
+      "title": "Animator-Play",
+      "description": "播放Animator动画",
+      "properties": {
+        "stateLayer": -1
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetBoolParameter",
+      "category": "action",
+      "title": "Animator-SetBool",
+      "description": "设置动画器上的bool参数",
+      "properties": {
+        "boolValue": "false",
+        "setOnce": "false"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetIntegerParameter",
+      "category": "action",
+      "title": "Animator-SetInteger",
+      "description": "设置动画器上的int参数",
+      "properties": {
+        "intValue": 0,
+        "setOnce": "false"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetTrigger",
+      "category": "action",
+      "title": "Animator-SetTrigger",
+      "description": "触发动画器上的触发器",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "IsName",
+      "category": "condition",
+      "title": null,
+      "description": "动作正在播放，则返回成功",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CheckArriveDistance",
+      "category": "condition",
+      "title": null,
+      "description": "检测是否到达目标位置，若目标不存在则使用配置中的xyz作为目标点",
+      "properties": {
+        "arriveDistance": 2
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetDynamicFloatParameter",
+      "category": "action",
+      "title": null,
+      "description": "根据外部数据动态设置动画器上的float参数",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Parallel",
+      "category": "composite",
+      "title": "",
+      "description": "并行执行所有任务 全部成功则返回成功 有一个失败则返回失败 有一个在running则返回running。下次从头开始执行所有任务。",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "MemParallel",
+      "category": "composite",
+      "title": null,
+      "description": "并行执行所有任务 全部成功则返回成功 有一个失败则返回失败 有一个在running则返回running。下次直接执行所有running状态的任务，若没有则从头开始执行所有任务。",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "MemParallelTrue",
+      "category": "composite",
+      "title": "",
+      "description": "并行执行所有任务  有一个在running则返回running 否者强制返回成功.下次直接执行所有running状态的任务，若没有则从头开始执行所有任务。",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Forever",
+      "category": "decorator",
+      "title": null,
+      "description": "无限循环，每次都返回RUNNING并执行一次子树。",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "AutoLockTarget",
+      "category": "action",
+      "title": null,
+      "description": "自动寻找仇恨目标，把仇恨列表中的第一个作为仇恨目标，执行完返回，值始终为true",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "Switch",
+      "category": "composite",
+      "title": null,
+      "description": "条件执行，首先判断条件是否为真，如果条件为真，那么执行\"真时执行\"分支；否则，执行\"假时执行\"分支。返回结果根据具体执行分支的执行结果来决定。先执行第一个节点 执行结果若返回成功则执行第二个节点 否则执行第三个节点",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "HadLockTarget",
+      "category": "condition",
+      "title": null,
+      "description": "判断有没有仇恨目标，有返回true，否则返回false",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CheckTargetDistance",
+      "category": "condition",
+      "title": null,
+      "description": "判断与目标的距离是否在指定范围内，如果是返回true，否则返回false",
+      "properties": {
+        "distance": 1
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CheckMathLogic",
+      "category": "condition",
+      "title": null,
+      "description": "'判断运算结果，如果符合逻辑判断返回true，否则返回false\n如CheckMathLogic( math.random(0,1)+1 < 1.5 )表示在[0,1]区间随机取一个数，加上1，如果小于1.5返回true，否则返回false",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "FaceTo",
+      "category": "action",
+      "title": null,
+      "description": "执行朝向逻辑，执行完后返回，不管有没被成功执行返回值始终为true\n如果有锁定的目标就朝向目标\n如果没有锁定的目标就朝向设置的坐标点",
+      "properties": {
+        "angularSpeed": 0.2,
+        "targetPosX": 0,
+        "targetPosY": 0,
+        "targetPosZ": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "CastSkill",
+      "category": "action",
+      "title": null,
+      "description": "释放技能 先判断是否可以释放技能 可以就播放相应的动作\nparamaterName 动作控制器中的参数名\nintValue 设置动作控制器中参数的值\nskillid 释放的技能ID",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "IsInPatrolArea",
+      "category": "action",
+      "title": null,
+      "description": "判断是否在巡逻区域，是返回true，否则返回false\n区域由出生点和巡逻半径组成 这些数据都是读取实例对象上的数据",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "GoPatrolArea",
+      "category": "action",
+      "title": null,
+      "description": "回到巡逻区域 强制返回success\ngopatrolType 1对象的出生点 2上次巡逻点\nspeed回去的速度\nangularSpeed 转角度的速度\narriveDistance 自身和目标点的距离小于此值认为到达\ntargetpos 取不到上次巡逻点的情况下使用此配置目标点如： \"120,2,100\"",
+      "properties": {
+        "gopatrolType": 1,
+        "speed": 2,
+        "angularSpeed": 0.2,
+        "arriveDistance": 2,
+        "targetpos": "0,0,0"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "PatrolInRange",
+      "category": "action",
+      "title": null,
+      "description": "巡逻 强制返回success\npatrolType 1范围取当前对象的出生点和巡逻半径 2取配置中的巡逻坐标点\nspeed巡逻速度\nangularSpeed 转角度的速度\narriveDistance 自身和巡逻点的距离小于此值认为到达\nrandomPatrol 当patrolType为2时有效。为true表示随机巡逻点 为false表示按照配置顺序一个一个走,走完循环回到第一个 \nwaypoints 对象配置身上没有的情况下使用此配置巡逻点,每个巡逻点坐标用\";\"隔开  如： \"120,2,100;105,2,100,90,2,100;105,2,115,105,2,85\"",
+      "properties": {
+        "patrolType": 1,
+        "speed": 2,
+        "angularSpeed": 0.2,
+        "arriveDistance": 2,
+        "randomPatrol": "true",
+        "waypoints": "0,0,0"
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "MoveTo",
+      "category": "action",
+      "title": null,
+      "description": "强制返回b3.SUCCESS\n移动到指定位置 如果LookTargetInfo存在就移动到LookTargetInfo对象所在位置 如果不存在就移动到配置中的坐标位置(targetPosX,targetPosY,targetPosZ)",
+      "properties": {
+        "speed": 2,
+        "angularSpeed": 0.2,
+        "arriveDistance": 2,
+        "targetPosX": 0,
+        "targetPosY": 0,
+        "targetPosZ": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SetFloatParameter",
+      "category": "action",
+      "title": "Animator-SetFloat",
+      "description": "设置动画器上的float参数",
+      "properties": {
+        "floatValue": 0,
+        "setOnce": "false"
+      }
+    }
+  ]
+}
