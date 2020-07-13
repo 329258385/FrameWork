@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: b9880440a8dc5df4da05700b5d870d8b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MangaMat: {fileID: 2100000, guid: c6680b61c28b6754aafa066a1550e6cc, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

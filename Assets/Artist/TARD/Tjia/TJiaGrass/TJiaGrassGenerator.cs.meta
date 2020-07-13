@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4855ca66384f4df42b6aff706ffd2ea0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - InteractiveGrassTexture: {fileID: 8400000, guid: 99b0e2b574a0685448d02d5597455716,
+      type: 2}
+  - InteractiveGrassMat: {fileID: 2100000, guid: 8ab4c27f95d56fd4caf9a9cc2c6ecca2,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

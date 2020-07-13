@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 63d256b6e515aef4e8b3629e89a4c71a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - OverdrawShader: {instanceID: 0}
+  - PlayerPos: {instanceID: 0}
+  - Mat: {fileID: 2100000, guid: 20a879469051a4648a20e06a89e3f35f, type: 2}
+  - lutTexture: {fileID: 11700000, guid: 28ae27d9442c48c4c97aa829b757a0c5, type: 2}
+  - lutTexture2: {fileID: 11700000, guid: 28ae27d9442c48c4c97aa829b757a0c5, type: 2}
+  - MangaScreenMat: {fileID: 2100000, guid: c6680b61c28b6754aafa066a1550e6cc, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

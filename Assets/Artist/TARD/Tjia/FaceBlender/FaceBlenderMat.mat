@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: FaceBlenderMat
+  m_Shader: {fileID: 4800000, guid: 330bf8f7639f8b34cbe1a75455f5f7b0, type: 3}
+  m_ShaderKeywords: _TYPE_ORIGINAL
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeTex:
+        m_Texture: {fileID: 2800000, guid: eacb8efc4bfe38d48b839daf1e00f636, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMap:
+        m_Texture: {fileID: 2800000, guid: 6b3892f3e81a05b4b9382a9467d23ce8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMapEye:
+        m_Texture: {fileID: 2800000, guid: f612c6d9de5db8147a9a5bbd738a1ea3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMapMakeup:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMapMouth:
+        m_Texture: {fileID: 2800000, guid: d358c89053e23bc419364ee5458e16fc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 1e98158a823b92940bcf127ff64839ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MakeupTex:
+        m_Texture: {fileID: 2800000, guid: 966570839b99b2c49b7b1da7c0a365f3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MouthTex:
+        m_Texture: {fileID: 2800000, guid: 22c18f091693f8d46ad8192aae3c6036, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DarkAlpha: 0.8
+    - _DarkAlpha0: 0.8
+    - _DetailNormalMapScale: 1
+    - _DisPercentage: 0
+    - _DisScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _LightRange: 0.3
+    - _LmcSwitch: 0
+    - _MakeupChanel: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _MonoOutlineValue: 0
+    - _OcclusionStrength: 1
+    - _OutlineBrightness: 0.05
+    - _OutlineWidth: 0.015
+    - _Parallax: 0.02
+    - _RimPower: 5
+    - _SSSValue: 2
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecColorForce: 1
+    - _SpecValue: 3
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TLLight: 0
+    - _Type: 0
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1.1486983, g: 1.1486983, b: 1.1486983, a: 1}
+    - _Color2: {r: 1, g: 1, b: 1, a: 1}
+    - _DisColor: {r: 0, g: 1.819067, b: 2.118547, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColor: {r: 0.060350217, g: 0.22450282, b: 0.6155722, a: 1}
+    - _EyeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EyeOri: {r: 0, g: 0.5, b: 0.75, a: 1}
+    - _EyeTO: {r: 1, g: 1, b: 0, a: 0}
+    - _EyeTar: {r: 0.12, g: 0.878, b: 0.38, a: 0.76}
+    - _MakeupColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MakeupOri: {r: 0, g: 1, b: 0, a: 1}
+    - _MakeupTar: {r: 0, g: 1, b: 0, a: 1}
+    - _MonoOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MouthColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MouthOri: {r: 0, g: 0.25, b: 0.75, a: 1}
+    - _MouthTar: {r: 0.375, g: 0.625, b: 0.264, a: 0.518}
+    - _RimShieldColor: {r: 1, g: 1, b: 1, a: 0}
+    - _TimeLineLightDir: {r: 0, g: 0, b: 0, a: 0}

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: de2c73e867ab3b740b112dd72bc57faa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - CharaLightModel: {fileID: 2800000, guid: 55347a509433aac4daf9bf98638069d3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

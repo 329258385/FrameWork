@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: cc563847a3861cc468dd40f37b09c79f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ColorSelectorTex: {instanceID: 0}
+  - BRDFTex: {instanceID: 0}
+  - NoiseTex: {instanceID: 0}
+  - SkyBoxMat: {fileID: 2100000, guid: a14814d524cb9444eb8b0efba8f93f10, type: 2}
+  - Player: {instanceID: 0}
+  - CloudNoiseTex: {instanceID: 0}
+  - CharaLightModelDiff: {instanceID: 0}
+  - CharaLightModel: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CameraFXMat
+  m_Shader: {fileID: 4800000, guid: 0916d6d693b9acb448d734145ba76a83, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CloudNoiseTex:
+        m_Texture: {fileID: 2800000, guid: 13d23996c2046f44cb81c69df65442a2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FogNoiseTex:
+        m_Texture: {fileID: 2800000, guid: 088de669fb5e0fa468abbc36ac7b9619, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LUTTex:
+        m_Texture: {fileID: 11700000, guid: 28ae27d9442c48c4c97aa829b757a0c5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LUTTex2:
+        m_Texture: {fileID: 11700000, guid: 28ae27d9442c48c4c97aa829b757a0c5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Rain:
+        m_Texture: {fileID: 2800000, guid: 1e087636f9e1ec142a483a1d1413affd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Wave:
+        m_Texture: {fileID: 2800000, guid: 0d6b8443b256a5d40beedd47b2070143, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ChannelDelta: 0
+    - _CloudSpeed: 0.4
+    - _CloudUVCoef: 1.5
+    - _Cutoff: 0.5
+    - _DFogDensity: 53.4
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EndY: 300
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _HighColorRange: 0
+    - _LUTForce: 0.3333
+    - _LerpLUT: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _ShowSky: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _StartY: 60
+    - _UVSec: 0
+    - _VFogDensity: 12.8
+    - _ZWrite: 1
+    m_Colors:
+    - _ChannelColor: {r: 1, g: 0, b: 0.037613392, a: 1}
+    - _CloudColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DFogColor: {r: 0, g: 0.7765689, b: 1, a: 0.60784316}
+    - _DFogColorFar: {r: 0.40143287, g: 0.8284885, b: 0.9150943, a: 0.4}
+    - _DFogColorNear: {r: 0.44949272, g: 0.69357204, b: 0.8584906, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _VFogColor: {r: 1, g: 1, b: 1, a: 1}
+    - _VFogColorHigh: {r: 0.44949272, g: 0.69357204, b: 0.8584906, a: 1}
+    - _VFogColorLow: {r: 0.44949272, g: 0.69357204, b: 0.8584906, a: 1}
+    - _VFogColorNear: {r: 1, g: 0.3537736, b: 0.3537736, a: 1}

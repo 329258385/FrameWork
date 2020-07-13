@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f3751a261645e464791b1d9dd5e2a99e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - LmColorRT: {instanceID: 0}
+  - GrassInfoRT: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

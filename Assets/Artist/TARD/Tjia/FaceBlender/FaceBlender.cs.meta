@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1776bf73db0cbf447acfdff7e6c115d1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - FaceTex: {instanceID: 0}
+  - FaceMask: {instanceID: 0}
+  - EyeTex: {instanceID: 0}
+  - EyeMask: {instanceID: 0}
+  - MouthTex: {instanceID: 0}
+  - MouthMask: {instanceID: 0}
+  - MakeupTex: {instanceID: 0}
+  - FaceOutTex: {instanceID: 0}
+  - FaceOutMask: {instanceID: 0}
+  - BlenderMat: {fileID: 2100000, guid: d5560498e0155f74e901986c9f66a1c3, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

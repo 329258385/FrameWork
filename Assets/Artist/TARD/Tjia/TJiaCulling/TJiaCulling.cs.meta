@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d4ccfb7867a7ca2478fa3f81dccb9255
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ParticleCullingShader: {instanceID: 0}
+  - ObjectCullingShader: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
